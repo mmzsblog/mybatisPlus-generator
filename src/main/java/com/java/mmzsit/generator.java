@@ -43,7 +43,7 @@ public class generator {
 //        DataSourceConfig dsc = new DataSourceConfig();
 //        dsc.setDbType(DbType.MYSQL);
 //        dsc.setDriverName("com.mysql.jdbc.Driver");
-//        dsc.setUrl("jdbc:mysql://118.24.19.22:3306/itresources?useUnicode=true&amp;characterEncoding=UTF-8&amp;generateSimpleParameterMetadata=true");
+//        dsc.setUrl("jdbc:mysql://localhost:3306/itresources?useUnicode=true&amp;characterEncoding=UTF-8&amp;generateSimpleParameterMetadata=true");
 //        dsc.setUsername("root");
 //        dsc.setPassword("123456");
 //        mpg.setDataSource(dsc);
