@@ -59,8 +59,10 @@ public class generator {
 
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
-        strategy.setInclude(new String[]{"TESTDATAS"}); // 需要生成的表
+        // 表名生成策略
+        strategy.setNaming(NamingStrategy.underline_to_camel);
+        // 需要生成的表,大小写一定要正确
+        strategy.setInclude(new String[]{"TESTDATAS"});
 //        strategy.setExclude(new String[]{"order"}); // 排除生成的表
         Field field = strategy.getClass().getDeclaredField("logicDeleteFieldName");
         field.setAccessible(true);
