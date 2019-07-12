@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.generator.config.GlobalConfig;
 import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-
 import java.lang.reflect.Field;
 
 /**
@@ -19,6 +18,7 @@ import java.lang.reflect.Field;
 public class generator {
     public static void main(String[] args) throws Exception {
         AutoGenerator mpg = new AutoGenerator();
+        // TODO 此处务必记得修改
         String outputDir = "D:\\WorkspaceGit\\mybatisPlus-generator\\src\\main\\java";
 
         // 全局配置
@@ -26,9 +26,12 @@ public class generator {
         gc.setOutputDir(outputDir);
         gc.setFileOverride(true);
         gc.setActiveRecord(true);
-        gc.setEnableCache(true);// XML 二级缓存
-        gc.setBaseResultMap(true);// XML ResultMap
-        gc.setBaseColumnList(true);// XML columList
+        // XML 二级缓存
+//        gc.setEnableCache(true);
+        // XML ResultMap
+        gc.setBaseResultMap(true);
+        // XML columList
+        gc.setBaseColumnList(true);
         gc.setAuthor("mmzsit");
 
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
@@ -63,7 +66,8 @@ public class generator {
         strategy.setNaming(NamingStrategy.underline_to_camel);
         // 需要生成的表,大小写一定要正确
         strategy.setInclude(new String[]{"TESTDATAS"});
-//        strategy.setExclude(new String[]{"order"}); // 排除生成的表
+        // 排除生成的表
+//        strategy.setExclude(new String[]{"order"});
         Field field = strategy.getClass().getDeclaredField("logicDeleteFieldName");
         field.setAccessible(true);
         field.set(strategy, "logic_del");
