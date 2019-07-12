@@ -3,5 +3,5 @@ springboot工程整合
 
 利用mybatisPlus自动构建工具
 
-操作文档：
-https://baomidou.oschina.io/mybatis-plus-doc/#/generate-code
+使用说明文档：
+[https://www.cnblogs.com/mmzs/p/11174518.html](https://www.cnblogs.com/mmzs/p/11174518.html)
